@@ -2,11 +2,7 @@ public class Person {
     private String name;
     private String number;
 
-    private String member;
 
-    public void setMember(String member) {
-        this.member = member;
-    }
 
     public String getName(String name) {
         return this.name;
@@ -24,4 +20,11 @@ public class Person {
         this.number = number;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", number='" + number + '\'' +
+                '}';
+    }
 }
