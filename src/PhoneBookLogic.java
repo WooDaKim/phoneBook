@@ -1,10 +1,13 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class PhoneBookLogic {
     Scanner scanner = new Scanner(System.in);
 
-    HashMap<String, Person> map = new HashMap<>();
+    //HashMap<String, Person> map = new HashMap<>();
+
+    ArrayList<Person> arrayList = new ArrayList<>();
 
 
     void menu(){
@@ -28,6 +31,7 @@ public class PhoneBookLogic {
                     editInfo();
                 default://종료
                     break;
+
             }
         }
     }
@@ -50,7 +54,7 @@ public class PhoneBookLogic {
 
     // list
     void menuList() {
-        System.out.println(map);
+        System.out.println(arrayList);
     }
 
     //add 입력
@@ -62,7 +66,7 @@ public class PhoneBookLogic {
         person.setName(name);
         person.setNumber(phone);
 
-        map.put(name, person);
+        arrayList.add(person);
 
     }
 
